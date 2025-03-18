@@ -12,14 +12,14 @@ credential = AzureCliCredential()
 token = credential.get_token("https://cognitiveservices.azure.com/.default").token
 
 # Azure OpenAI Configuration
-AZURE_OPENAI_ENDPOINT = "https://agentic-ai-workshop-openai.openai.azure.com"
+AZURE_OPENAI_ENDPOINT = "<REPLACE_WITH_YOUR_ENDPOINT>"
 DEPLOYMENT_NAME = "gpt-4o"  # Your Azure OpenAI deployment name
 
 # Define the AI Agent using AutoGen
 config_list = [
     {
         "model": DEPLOYMENT_NAME,
-        "api_key": token,  # Set to None when using token-based auth
+        "api_key": token,  
         "base_url": f"{AZURE_OPENAI_ENDPOINT}",
         "api_type": "azure",
         "api_version": "2024-02-01",
