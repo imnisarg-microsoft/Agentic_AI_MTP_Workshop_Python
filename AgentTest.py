@@ -29,10 +29,7 @@ config_list = [
 # response = OpenAIChatAgentDemo(config_list).runUserGoal("What is the capital of India?")
 # response = OpenAIAgentWithUserProxy(config_list).runUserGoal("What is Autogen?")
 # response = MiddlewareAgentDemo(config_list).runUserGoal("What is threat hunting?")
-assistantWithHistoryObj = AssistantAgentWithConversationHistory(config_list)
-print(assistantWithHistoryObj.runUserGoal("Call me Nisarg"))  # Expect: "Sure thing, Nisarg!"
-print(assistantWithHistoryObj.runUserGoal("What is my name?"))  # Expect: "Your name is Nisarg."
-#response = AgentWithFunctionCall(config_list).runUserGoal()
-#print(response)
+response = AgentWithFunctionCall(config_list).runUserGoal()
+print(response)
 
 
